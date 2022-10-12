@@ -44,6 +44,7 @@ class Env():
 
 
     def aet_state(self, time_step, winner):
+        enemy_player = (player + 1) % 2
         index = time_step * 3
         for player, p_log in enumerate(self.player_log):
             p_log[index] = self.turn_action[player]
